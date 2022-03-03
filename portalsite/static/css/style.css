@@ -1,5 +1,7 @@
 body {
   background-color:#131b23;
+  color:#f1f2eb;
+  left:0;
 }
 .Sidebar {
   width:0;
@@ -9,7 +11,7 @@ body {
   background: #f1f2eb;
   overflow-x: hidden;
   left:0;
-  transition: 0.5s;
+  transition: 0.1s;
 }
 
 .Sidebar a{
@@ -18,21 +20,80 @@ body {
   font-size: 25px;
   color: #131b23;
   display: block;
-  transition: 0.3s;
+  transition: 0.1s;
+  text-align: center;
 }
+
 .Sidebar a:hover{
-  color: #15679e;
+  background-color: #9e9e9d;
+}
+.Sidebar .x{
+  position:relative;
+  top:0;
+  right:0px;
+  text-align: right;
 }
 .topbar{
   background-color: #f1f2eb;
   position:fixed;
-  z-index: 998;
   width:100%;
   height:70px;
   left:0;
+  display: flex;
+  flex-direction: row;
 }
 .hamburg{
   width:50px;
   height: 50px;
   background-size:cover;
+  position: relative;
+}
+.logout{
+  position:absolute;
+  bottom: 10;
+  right: 0;
+  left:0;
+}
+.contents{
+  top:80px;
+  position:fixed;
+  margin-top:10%;
+  width:100%;
+  left:0;
+}
+span{
+  position:relative;
+  top:20px;
+  color:#131b23;
+  font-size: 25px;
+}
+#notvoted{
+  color:#88292f;
+}
+.nonmain{
+  top:80px;
+  position:fixed;
+  width:100%;
+  left:0;
+}
+ol{
+  font-size: 25px;  
+  position:absolute;
+  right:5%;
+}
+.graph{
+  position:absolute;
+  top:-10%;
+  left:20px;
+}
+.scheduling{
+  position:fixed;
+  right:5%;
+  bottom:5%;
+  background-color: #054f99;
+  display: inline-block;
+  color:#f1f2eb;
+  height:50px;
+  width:300px;
+  font-size: 15px;
 }
