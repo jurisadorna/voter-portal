@@ -1,0 +1,47 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: rgb(19, 28, 35) !important;
+}
+
+#sidebarToggle {
+  color: #ffc107;
+}
+
+#votedStatus {
+  color: darkred;
+}
+
+#mainContent {
+  height: 100%;
+}
+
+#pageContent {
+  height: 90%;
+}
+
+#sidebar {
+  width: 300px;
+  position: absolute;
+  z-index: 999;
+  box-shadow: 0px 0px 10px #020202;
+}
+
+#sidebarExit:hover {
+  color: rgb(163, 38, 38);
+  text-shadow: 0px 0px 5px #850808;
+  cursor: pointer;
+}
+
+#sidebarExit {
+  color: rgb(0, 0, 0);
+  text-shadow: 0px 0px 5px #585858;
+  transition: 0.4s;
+}
+
+#sidebar ul li:hover {
+  background-color: rgb(211, 211, 211);
+}

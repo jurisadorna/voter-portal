@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voter's Portal</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/d32238ae01.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="sidebar">
+      <nav class="navbar navbar-expand d-flex flex-column bg-light pt-5 pb-4">
+        <i class="fa-solid fa-lg fa-x align-end pb-5" id="sidebarExit"></i>
+        <h3 class="text-center">Voter's Portal</h3>
+        <ul class="navbar-nav d-flex flex-column w-100">
+          <li class="active text-center">
+            <a href="#" class="nav-link text-dark">Check Profile</a>
+          </li>
+          <li class="active text-center">
+            <a href="#" class="nav-link text-dark">Check Precinct Status</a>
+          </li>
+          <li class="active text-center">
+            <a href="#" class="nav-link text-dark">Schedule</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <nav class="navbar bg-light py-3">
+      <div class="container-fluid d-flex justify-content-start">
+        <button
+          id="menu-btn"
+          type="button"
+          class="btn btn-light btn-lg border border-4 border-warning ms-4"
+        >
+          <i id="sidebarToggle" class="fa-solid fa-bars fa-lg"></i>
+        </button>
+        <h2 class="fst-italic ps-5">
+          Current Status:
+          <span id="votedStatus" class="fw-bold">Not Voted</span>
+        </h2>
+      </div>
+    </nav>
+    <div
+      class="container d-flex flex-column justify-content-center align-items-center"
+      id="pageContent"
+    >
+      <h1 class="fw-bolder text-light text-center">
+        <strong>Welcome to the Voter's Portal!</strong>
+      </h1>
+      <p class="mt-5 text-light lead">
+        a webapp to help you schedule your voting time smartly
+      </p>
+      <p class="text-light lead">Open the menu to start navigating!</p>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $("#sidebar").hide();
+
+      $(document).ready(function () {
+        $("#menu-btn").on("click", function () {
+          $("#sidebar").toggle(500);
+        });
+
+        $("#sidebarExit").on("click", function () {
+          $("#sidebar").toggle(500);
+        });
+      });
+    </script>
+  </body>
+</html>
