@@ -1,0 +1,8 @@
+{% extends 'login.html' %}
+{%block title %} Password Recovery {%endblock%}
+{% block form %}
+<form class="forms" method="post">
+    <input type="text" placeholder="jdelacruz@gmail.com" name="username" required><br><br>
+    <button id="loginButton" class="loginbut" type="submit">Send Reset Link</button>
+</form>
+{%endblock%}

@@ -1,0 +1,79 @@
+{% load static %}
+<html>
+    <head>
+        <title>{%block title %}Create Account{%endblock%}</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+        <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+    </head>
+    <body>
+        <div>
+          <center><img src="{% static 'img/logo_light.png' %}" alt="Logo of Voter's Portal" width="30%" style="padding-top: 70px;"></center>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="container d-flex flex-column justify-content-center align-items-center">
+              <h2 class="titletext">
+                        First Name: <br>
+              <input type="text" placeholder="Enter First Name" name="fName" style="width: 500px"><br>
+              <h2 >
+                        Middle Name: <br>
+              <input type="text" placeholder="Enter Middle Name" name="mName" style="width: 500px"><br>
+              <h2 >
+                        Last Name: <br>
+              <input type="text" placeholder="Enter Last Name" name="lName" style="width: 500px"><br>
+              <br><br><br>
+    
+              <p><b>ADDRESS </b></p>
+    
+              <h2 >
+                        Street: <br>
+              <input type="text" placeholder="Enter Street" name="street" style="width: 500px"><br>
+              <h2 >
+                        Barangay: <br>
+              <input type="text" placeholder="Enter Barangay" name="barangay" style="width: 500px"><br>
+              <h2 >
+                        Municipality/City: <br>
+              <input type="text" placeholder="Enter Municipality/City" name="city" style="width: 500px"><br>
+              <h2 >
+                        Province: <br>
+              <input type="text" placeholder="Enter Province" name="province" style="width: 500px">
+            </div>
+          </div>
+    
+    
+          <div class="col">
+            <div class="container d-flex flex-column justify-content-center align-items-center">
+              <h2 >
+                        Voter's ID: <br>
+              <input type="text" placeholder="Enter Voter's ID" name="voterID" style="width: 500px"><br>
+              <h2 >
+                        Precinct Number: <br>
+              <input type="text" placeholder="Enter Precinct Number" name="precinctNo" style="width: 500px"><br>
+              <br><br><br><br><br><br><br>
+              
+              <h2 >
+                        Username: <br>
+              <input type="text" placeholder="Enter Username" name="username" style="width: 500px"><br>
+              <h2 >
+                        Email: <br>
+              <input type="text" placeholder="Enter Email" name="email" style="width: 500px"><br>
+              <h2 >
+                        Password: <br>
+              <input type="password" placeholder="Enter Password" name="password" style="width: 500px"><br>
+              <h2 >
+                        Retype Password: <br>
+              <input type="password" placeholder="Retype Password" name="retypePw" style="width: 500px">
+    
+            </div>
+          </div>
+        </div>
+    
+        <div class="agree">
+          <label class="row centermost">
+            <input type="checkbox" name="agreement"><strong> I agree that all information entered are true and anything entered can be used against me for anything related to the account.</strong>
+          </label>
+          <button type="button" class="enteracc">
+              CREATE ACCOUNT
+          </button>
+      </body>
+</html>

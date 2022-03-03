@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block content %}
+<div class="nonmain">
+    <a class="edit" href='#'>Edit Profile</a>
+    <div class="col">
+        <h2 class="outlined">Basic Information</h2><br>
+        <div class="bordered row">
+            <div class="col sized">
+                <span class="info"><strong>First Name:</strong><label class="infooveride">Juanito</label></span>
+                <span class="info"><strong>Middle Name:</strong><label class="infooveride">Loremip</label></span>
+                <span class="info"><strong>Last Name:</strong><label class="infooveride">Dela Cruz</label></span>
+            </div>
+            <div class="col sized">
+                <span class="info"><strong>Current Address:</strong><label class="infooveride">Brgy Batong-Patay, Binuhay, Quezon City</label></span>
+                <span class="info"><strong>Email:</strong><label class="infooveride">jdelacruz123@gmail.com</label></span>
+                <span class="info"><strong>Cellphone Number:</strong><label class="infooveride">09123141592</label></span>
+            </div>
+        </div>
+        <br><br>
+        <h2 class="outlined">Voter's Information</h2><br>
+        <div class="bordered row">
+            <div class="col">
+                <span class="info"><strong>Voter ID:</strong><label class="infooveride">7402-1012B-I0605JLD10000-6</label></span>
+                <span class="info"><strong>Precinct Number:</strong><label class="infooveride">1012 B</label></span>
+                <span class="info"><strong>Precinct Location:</strong><label class="infooveride">Brgy Batong-Buhay, Pinatay, Quezon City</label></span>
+            </div>
+        </div>
+    </div>
+    <a class="scheduling" href='schedule'>Proceed to Scheduling</a>
+</div>
+{%endblock%}

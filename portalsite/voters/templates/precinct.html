@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{%load static %}
+{%block content %}
+<div class="nonmain">
+    <img class="graph" src="{% static 'img/pi.png' %}">
+    <ol>
+        {% for i in top5%}
+            <li>{{i}}</li>
+        {% endfor %}
+    </ol>
+    <a class="scheduling" href='schedule'>Proceed to Scheduling</a>
+</div>
+{% endblock %}

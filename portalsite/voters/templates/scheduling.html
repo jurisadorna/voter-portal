@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="nonmain right">
+    <center>
+    <h1> Please select a TimeSlot</h1>
+    <select class="dropdown" onchange="myfunc(this)">
+        {% for sched in scheds %}
+            <option value="{{forloop.counter}}">{{sched}}</option>
+        {% endfor %}
+    </select>
+    <div class="row enlarge">Possible Traffic:&nbsp;<label id="traffic">{{traffic.0}}</label>&nbsp;Voters</div>
+    <button class="finishsched">Proceed</button>
+</div>
+
+</center>
+<script>
+    function myfunc(val) {
+        var value=val.value;
+        document.getElementById("traffic").innerHTML=value;
+    }
+</script>
+{% endblock %}

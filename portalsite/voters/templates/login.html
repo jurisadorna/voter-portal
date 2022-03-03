@@ -1,0 +1,25 @@
+{% load static %}
+<html>
+    <head>
+        <title>{%block title %}Login{%endblock%}</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+        <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+    </head>
+    <body>
+          <center><img src="{% static 'img/logo_light.png' %}" alt="Logo of Voter's Portal" width="30%" style="padding-top: 70px;">
+            {%block form %}
+          <form class="forms" method="post">
+            <div class="loginText"><label style="font-style: italic; font-weight: bold; font-size: 20px;">Username: </label></div>    
+            <input type="text" placeholder="Enter Username" name="username" required> <br>
+            <div class="loginText"><label style="font-style: italic; font-weight: bold; font-size: 20px;">Password: </label></div>   
+            <input type="password" placeholder="Enter Password" name="password" required>
+            <div id="loginText" style="text-align: right;"><a href="recovery" class="light" style="font-style: italic; text-align: right; font-size: 12px; text-decoration: none;">Forgot password? </a></div>
+            <br>
+            <a id="loginButton" class="loginbut" href="Home">Login</a><br>
+  
+            <label class="mt-5 text-light lead" style="font-style: italic; font-size: 20px;">Are you a new Voter with no existing account? <a href="createAcc" style="text-decoration: none;">Click here to register.</a></label>
+          </form>
+          {% endblock %}
+        </center>
+    </body>
+</html>
