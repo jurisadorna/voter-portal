@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block content %}
+<div class="contents">
+    <center>
+    <img src="{% static 'img/logo_light.png' %}"><br>
+    <select name="lang" id="lang">
+        <option class="mt-5 text-light lead" value="eng">English</option>
+        <option class="mt-5 text-light lead" value="fil">Filipino</option>
+      </select>
+      <br>
+      <br>
+      <a class="changebutn" href="Home">Apply Changes</a>
+    </center>
+</div>
+{%endblock%}
