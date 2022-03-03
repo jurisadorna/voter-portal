@@ -54,7 +54,7 @@ ROOT_URLCONF = 'portalsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [Path.joinpath(BASE_DIR,"templates"),Path.joinpath(BASE_DIR,"voters/templates")],
+        'DIRS': [Path.joinpath(BASE_DIR,"templates"),Path.joinpath(BASE_DIR,"voters/templates"),Path.joinpath(BASE_DIR,"adminside/templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

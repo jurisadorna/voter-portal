@@ -236,3 +236,10 @@ text-align: left;
   font-size: 35px;
   width:30%;
 }
+.top{
+  position:absolute;
+  top:100px;
+}
+#selection{
+  width:300px;
+}
