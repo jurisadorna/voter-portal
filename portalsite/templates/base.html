@@ -7,8 +7,19 @@
     </head> 
     <body>
         {% include 'nav.html' %}
-        <div class="topbar"><button class="hamburg nav" onclick="openNav()"><div class=""></div></button></div>
-        <h1>Hello World</h1>
+        <div class="topbar">
+            <button class="hamburg nav" onclick="openNav()"></button>
+            {% block status %}<span>Current Status:</span><span id="notvoted">Not Voted</span>{% endblock %}
+        </div>
+        {% block content %}
+        <div class="contents">
+            <center>
+                <h1>Welcome to the Voter's Portal</h1>
+                <h3>A Webapp to help you schedule your voting time smartly.</h3>
+                <h3>Open the Menu to start Navigating</h3>
+            </center>
+        </div>
+        {% endblock content %}
     </body>
     <style>
         .nav{

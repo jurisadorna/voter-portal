@@ -2,6 +2,7 @@ body {
   background-color:#131b23;
   color:#f1f2eb;
   left:0;
+  font-family: Cambria;
 }
 .Sidebar {
   width:0;
@@ -41,6 +42,8 @@ body {
   left:0;
   display: flex;
   flex-direction: row;
+  z-index:990;
+  top:0;
 }
 .hamburg{
   width:50px;
@@ -72,7 +75,7 @@ span{
 }
 .nonmain{
   top:80px;
-  position:fixed;
+  position:absolute;
   width:100%;
   left:0;
 }
@@ -96,4 +99,140 @@ ol{
   height:50px;
   width:300px;
   font-size: 15px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 28px;
+}
+
+input{
+  height:50px;
+  font-size: 20px;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.col{
+  padding:4% 8% 8% 8%;
+  height:100%;
+}
+.agree{
+  text-align: center;
+}
+.enteracc{
+  width:50%;
+  height: 70px;
+  font-size: 2em;
+  background-color:#1687f1;
+  color: white;
+}
+label{
+  display: flex;
+  flex-direction: row;
+}
+.forms{
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    width:55%;
+}
+.loginText{
+  text-align: left;
+  margin: 4% 4% 1% 0;
+}
+.light{
+  color: #f1f2eb;
+}
+.loginbut{
+  text-decoration: none;
+  display: block;
+  background-color: #88292f;
+  color: #f1f2eb;
+  height: 50px;
+  text-align: center;
+  justify-content: center;
+  font-size: 35px;
+}
+select{
+  width:30%;
+  height: 40px;
+  font-size: 20px;
+  padding-left:3%;
+}
+.right{
+  margin-left: 5%;
+}
+.enlarge{
+  font-size:40px;
+}
+#traffic{
+  color:#deba6f;
+}
+.finishsched{
+  position: fixed;
+  right:5%;
+  width:30%;
+  height:10%;
+  top:70%;
+  background-color: #1687f1;
+  color:#f1f2eb;
+  font-size: 150%;
+}
+.centermost{
+  align-items: center;
+  justify-content: center;
+}
+.bordered{
+  border:5px solid #054f99;
+  width:95%;
+  height:300px;
+}
+.oneline{
+  color:white;
+
+}
+.basicoutlined{
+  stroke:10px solid #1687f1;
+  color: white;
+}
+.info{
+  color:white;
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  margin-bottom:10%;
+}
+.infooverride{
+text-align: left;
+}
+.sized{
+  width:35%;
+  text-align: center;
+}
+.edit{
+  position: absolute;
+  background-color: #054f99;
+  right:5%;
+  display: inline-block;
+  color:#f1f2eb;
+  text-decoration: none;
+  height:50px;
+  width:300px;
+  font-size: 15px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 28px;
+}
+.changebutn{
+  text-decoration: none;
+  display: block;
+  background-color: #88292f;
+  color: #f1f2eb;
+  height: 50px;
+  text-align: center;
+  justify-content: center;
+  font-size: 35px;
+  width:30%;
 }
