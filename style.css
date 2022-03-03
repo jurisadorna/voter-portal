@@ -45,3 +45,25 @@ body {
 #sidebar ul li:hover {
   background-color: rgb(211, 211, 211);
 }
+
+#loginButton {
+  background-color: #850808;   
+  width: 70%;  
+  color: rgb(211, 211, 211);   
+  padding: 15px;   
+  margin: 10px 0px;   
+  border: none;   
+  cursor: pointer;   
+}
+
+input[type=text], input[type=password] {   
+  width: 70%;   
+  margin: 8px 0;  
+  padding: 12px 20px;   
+  display: inline-block; 
+  box-sizing: border-box;   
+}
+
+#loginText{
+  width: 70%;
+}
