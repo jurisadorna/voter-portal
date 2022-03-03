@@ -67,3 +67,9 @@ input[type=text], input[type=password] {
 #loginText{
   width: 70%;
 }
+
+
+hr.solid {
+  border-top: 3px solid #ffc107;
+  margin: 8px 0;
+}
