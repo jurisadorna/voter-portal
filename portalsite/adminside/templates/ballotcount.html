@@ -2,10 +2,11 @@
 {%block content %}
 <div class="nomain right top">
     <select id="selection" onchange="display(this)">
-        <option value=0> By Precinct number</option>
+        <option value=1> By Precinct number</option>
         <option value=2> By Municipality</option>
         <option value=3> By Province</option>
         <option value=4> By Region</option>
+        <option value=5> National</option>
     </select>
     <div class="row top" id="inputs">
         <input type="text" placeholder="Precinct Number">
@@ -18,7 +19,8 @@
             case 1: document.getElementById("inputs").innerHTML="<input type='text' placeholder='Precinct Number'>";break;
             case 2:document.getElementById("inputs").innerHTML="<input type='text' placeholder='Precinct Number'><input type='text' placeholder='Municipality'>";break;
             case 3:document.getElementById("inputs").innerHTML="<input type='text' placeholder='Precinct Number'><input type='text' placeholder='Municipality'><input type='text' placeholder='Province'>";break;
-
+            case 4:document.getElementById("inputs").innerHTML="<input type='text' placeholder='Precinct Number'><input type='text' placeholder='Municipality'><input type='text' placeholder='Province'><input type='text' placeholder='Region'>";break;
+            case 5:document.getElementById("inputs").innerHTML="";break;
         }
     }
 </script>
