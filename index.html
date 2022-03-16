@@ -16,9 +16,10 @@
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-
+    
     <!-- Custom styles for this template-->
     <link href="bootstrap/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="bootstrap/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 
@@ -28,11 +29,11 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="main.html">
-                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="main.html">
                     <div class="sidebar-brand-icon">
                         <img src="logo_light.png" width="100%" style="padding-bottom: 30%;">
                     </div>
@@ -41,7 +42,7 @@
             
             <li class="nav-item">
                 <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <i class="fas fa-fw fa-info-circle"></i>
                     <span>About us</span></a>
             </li>
 
@@ -54,12 +55,11 @@
             </div>
 
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
+                <a class="nav-link" href="schedule.html">
+                    <i class="fas fa-fw fa-calendar"></i>
                     <span>Schedule voting</span></a>
             </li>
 
-            <!-- Nav Item - Charts -->
             <li class="nav-item">
                 <a class="nav-link" href="charts.html">
                     <i class="fas fa-fw fa-chart-area"></i>
@@ -69,18 +69,25 @@
             <!-- Account management -->
             <hr class="sidebar-divider">
 
-            <!-- Nav Item - Tables -->
+            <!-- Login/Register: only visible when logged out -->
             <li class="nav-item">
-                <a class="nav-link" href="login.html">
-                    <i class="fas fa-fw fa-table"></i>
+                <a class="nav-link bg-danger" href="login.html">
+                    <i class="fas fa-fw fa-exclamation-triangle"></i>
                     <span>Login/Register</span></a>
             </li>
 
-            <!-- Nav Item - Charts -->
+            <!-- View information: only visible when logged out -->
             <li class="nav-item">
-                <a class="nav-link" href="login.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Login</span></a>
+                <a class="nav-link" href="profile.html">
+                    <i class="fas fa-fw fa-clipboard-list"></i>
+                    <span>View information</span></a>
+            </li>
+
+            <!-- View information: only visible when logged out -->
+            <li class="nav-item">
+                <a class="nav-link" href="welcome.html">
+                    <i class="fas fa-fw fa-sign-out-alt"></i>
+                    <span>Log Out</span></a>
             </li>
 
             <!-- Divider -->
@@ -93,8 +100,8 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="createaccount.html">
-                    <i class="fas fa-fw fa-table"></i>
+                <a class="nav-link" href="changelang.html">
+                    <i class="fas fa-fw fa-wrench"></i>
                     <span>Change language</span></a>
             </li>
 
@@ -116,7 +123,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-light bg-light topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -154,7 +161,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Juan dela Cruz</span>
                                 <img class="img-profile rounded-circle"
                                     src="bootstrap/img/undraw_profile.svg">
                             </a>
@@ -166,12 +173,12 @@
                                     Voting status: Not voted
                                 </a>
                                 <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    <i class="fas fa-calendar fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Voting schedule: Not set
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-danger-400"></i>
                                     Logout
                                 </a>
                             </div>
@@ -183,7 +190,7 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
+                <div class="container-fluid bg-light">
 
                     <!-- 404 Error Text -->
                     <div class="text-center">
@@ -202,7 +209,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
+            <footer class="sticky-footer bg-dark">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; Your Website 2020</span>
