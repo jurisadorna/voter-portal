@@ -21,4 +21,4 @@ def pwrecovery_view(request,*args,**kwargs):
 def profile_view(request,*args,**kwargs):
     return render(request,"profile.html",{})
 def clang_view(request,*args,**kwargs):
-    return render(request,"lang.html",{})
+    return render(request,"changelang.html",{})
