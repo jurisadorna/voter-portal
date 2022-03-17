@@ -2527,14 +2527,14 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #4e73df;
-  border-color: #4e73df;
+  background-color: #3066be;
+  border-color: #3066be;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #2e59d9;
-  border-color: #2653d4;
+  background-color: #2354a3;
+  border-color: #2354a3;
 }
 
 .btn-primary:focus,
@@ -11338,13 +11338,11 @@ form.user .custom-checkbox.small label {
 
 form.user .form-control-user {
   font-size: 0.8rem;
-  border-radius: 10rem;
   padding: 1.5rem 1rem;
 }
 
 form.user .btn-user {
   font-size: 0.8rem;
-  border-radius: 10rem;
   padding: 0.75rem 1rem;
 }
 
@@ -11740,4 +11738,12 @@ footer.sticky-footer .copyright {
 
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
+}
+
+#red-btn {
+  background-color: #88292f;
+  font-size: x-large;
+}
+#login-bg {
+  background-color: #f1f2eb;
 }
