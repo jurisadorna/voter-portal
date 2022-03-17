@@ -1,0 +1,33 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+        <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+        <title>Voter's Portal</title>
+    </head> 
+    <body>
+        {% include 'nav.html' %}
+        <div class="topbar">
+            <button class="hamburg nav" onclick="openNav()"></button>
+            {% block status %}<span>Current Status:</span><span id="notvoted">Not Voted</span>{% endblock %}
+        </div>
+        {% block content %}
+        <div class="contents">
+            <center>
+                <h1>Welcome to the Voter's Portal</h1>
+                <h3>A Webapp to help you schedule your voting time smartly.</h3>
+                <h3>Open the Menu to start Navigating</h3>
+            </center>
+        </div>
+        {% endblock content %}
+    </body>
+    <style>
+        .nav{
+            background-image: url("{% static 'img/navbutton.png' %}");
+            background-size: cover;
+            display: block;
+            border:0;
+            margin:10px;
+        }
+    </style>
+</html>
