@@ -59,7 +59,11 @@
   <body>
       <!-- navbar -->
       {% if user.is_authenticated %}
-        {%include 'navbar_loggedin.html'%}
+        {%if user.is_voter%}
+          {%include 'navbar_loggedin.html'%}
+        {%else%}
+        {%include 'navbar_admin.html'%}
+        {%endif%}
       {% else %}
         {%include 'navbar_loggedout.html'%}
       {%endif %}

@@ -11,8 +11,7 @@ def home_view(request,*args,**kwargs):
     user=request.user
     full_name=''
     if user.is_authenticated:
-        name=Voter.objects.get(user=user)
-        full_name=name.user.first_name+" "+name.user.last_name
+        full_name=user.first_name+" "+user.last_name
     return render(request,"base.html",{'user':user, 'name':full_name})
 
 def profile_view(request,*args,**kwargs):
