@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from django.core.validators import RegexValidator
 # Create your models here.
 class User(AbstractUser):
     is_admin=models.BooleanField('is admin',default=False)
@@ -12,6 +13,8 @@ class Voter(models.Model):
     vId=models.CharField(max_length=100)
     pNum=models.CharField(max_length=100)
     Add=models.CharField(max_length=300)
+    has_voted=models.BooleanField('Voted',default=False)
+    contact=models.CharField(max_length=11, default='09000000000', validators=[RegexValidator(r'^[0-9]{5}$')])
 class Precinct(models.Model):
     pNum=models.CharField(max_length=100,unique=True)
     pAdd=models.CharField(max_length=300)
