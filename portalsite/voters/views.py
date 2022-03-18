@@ -3,7 +3,9 @@ from django.shortcuts import render,redirect
 
 # Create your views here.
 def home_view(request,*args,**kwargs):
-    return render(request,"base.html",{})
+    user=request.user
+    return render(request,"base.html",{'user':user})
+    
 def precinct_view(request,*args,**kwargs):
     return render(request,"precinct.html",{"top5":["8:30 AM - 9:00 AM (30%)","7:30 AM - 8:00 AM(20%)","2:30 PM - 3:00 PM(15%)","8:00 AM - 8:30 AM(10%)","1:00 PM - 1:30 PM(5%)"]})
 def redirectview(request,*args,**kwargs):
