@@ -2,15 +2,27 @@
 {% load static %}
 {%block content %}
 <div class="contents">
-    <center>
+  <center>
     <img src="{% static 'img/logo_light.png' %}"><br>
-    <select name="lang" id="lang">
-        <option class="mt-5 text-light lead" value="eng">English</option>
-        <option class="mt-5 text-light lead" value="fil">Filipino</option>
-      </select>
-      <br>
-      <br>
-      <a class="changebutn" href="Home">Apply Changes</a>
-    </center>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+      <label class="form-check-label" for="flexRadioDefault1">
+        English
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" checked disabled>
+      <label class="form-check-label" for="flexRadioCheckedDisabled">
+        Filipino
+      </label>
+    </div>
+    <div class="my-2"></div>
+    <a href="Home" class="btn btn-success btn-icon-split">
+        <span class="icon text-white-50">
+            <i class="fas fa-check"></i>
+        </span>
+        <span class="text">Apply changes</span>
+    </a>
+  </center>
 </div>
 {%endblock%}
