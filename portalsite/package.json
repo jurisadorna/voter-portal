@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "billboard.js": "^3.3.3",
     "chart.js": "^3.7.1"
   }
 }

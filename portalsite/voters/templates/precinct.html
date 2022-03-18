@@ -2,7 +2,7 @@
 {%load static %}
 {%block content %}
 <div class="nonmain">
-    <img class="graph" src="{% static 'img/pi.png' %}">
+    {%include 'charts.html'%}
     <ol>
         {% for i in top5%}
             <li>{{i}}</li>

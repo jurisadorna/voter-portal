@@ -1,4 +1,6 @@
+from random import randint
 from re import L
+import re
 from django.http import HttpResponse
 from django.shortcuts import render,redirect 
 from django.contrib.auth import authenticate, login,logout
@@ -24,7 +26,15 @@ def profile_view(request,*args,**kwargs):
     print(precinct)
     return render(request,"profile.html",{'user':user,'name':full_name, 'info':name,'pr':precinct})
 def precinct_view(request,*args,**kwargs):
-    return render(request,"precinct.html",{"top5":["8:30 AM - 9:00 AM (30%)","7:30 AM - 8:00 AM(20%)","2:30 PM - 3:00 PM(15%)","8:00 AM - 8:30 AM(10%)","1:00 PM - 1:30 PM(5%)"]})
+    a=randint(1,20)
+    b=randint(0,30)
+    user=request.user
+    full_name=''
+    if not user.is_authenticated:
+        return redirect('Home')
+    name=Voter.objects.get(user=user)
+    full_name=name.user.first_name+" "+name.user.last_name
+    return render(request,"precinct.html",{'name':full_name,"top5":["8:30 AM - 9:00 AM (30%)","7:30 AM - 8:00 AM(20%)","2:30 PM - 3:00 PM(15%)","8:00 AM - 8:30 AM(10%)","1:00 PM - 1:30 PM(5%)"],'v':a,'nv':b})
 def redirectview(request,*args,**kwargs):
     r=redirect('Home')
     return r
@@ -62,3 +72,6 @@ def login_view(request,*args,**kwargs):
 def logout_acc(request):
     logout(request)
     return redirect("Home")
+
+def testview(request): #for testing of incorporated css and js files
+    return render(request,"charts.html",{})
