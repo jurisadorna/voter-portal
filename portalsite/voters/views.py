@@ -29,7 +29,7 @@ def redirectview(request,*args,**kwargs):
     r=redirect('Home')
     return r
 def createacc_view(request,*args,**kwargs):
-    return render(request,"createacc.html",{})
+    return render(request,"createaccount.html",{})
 
 def scheduling_view(request,*args,**kwargs):
     my_context={"scheds":["8:30 AM - 9:00 AM","7:30 AM - 8:00 AM","2:30 PM - 3:00 PM","8:00 AM - 8:30 AM","1:00 PM - 1:30 PM"],"traffic":[10,23,5,6,12]}

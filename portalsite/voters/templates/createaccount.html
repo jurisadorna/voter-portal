@@ -1,7 +1,6 @@
 {%extends 'base.html' %}
 {%load static %}
 {%block content %}
-
 <div class="container">
   <div class="card shadow-lg my-5">
     <div class="card-body p-0">
@@ -9,12 +8,13 @@
       <div class="row border border-5 border-danger">
         <div class="container text-center mt-3">
           <img
-            src="logo_light.png"
+            src="{%static 'img/logo_light.png'%}"
             alt="Logo of Voter's Portal"
             width="15%"
           />
+          <h1 class="h2 pt-3 text-gray-900 text-center">Create an Account</h1>
         </div>
-        <h1 class="h2 pt-3 text-gray-900 text-center">Create an Account</h1>
+        
         <!-- Left Side -->
         <div class="col-lg-6 px-5 border border-2 border-success rounded">
           <!-- Name -->
