@@ -1,46 +1,40 @@
-{%extends 'base.html' %}
-{%load static %}
+{%extends 'base.html'%}
+{% load static %}
 {%block content %}
-<div class="container-fluid bg-light text-center">
-  <div class="text-center">
-    <img
-      src="{% static 'img/menu-logo.png' %}"
-      alt="Logo of Voter's Portal"
-      width="25%"
-      style="padding-bottom: 25px"
-    />
-    <h1>Please Select a language</h1>
-
-    <!-- Eng/Fil Button -->
-    <div
-      class="btn-group btn-group-lg"
-      role="group"
-      aria-label="Basic radio toggle button group"
-    >
-      <input
-        type="radio"
-        class="btn-check"
-        name="btnradio"
-        id="btnradio1"
-        autocomplete="off"
-        checked
-      />
-      <label class="btn btn-outline-primary" for="btnradio1"
-        >English</label
-      >
-
-      <input
-        type="radio"
-        class="btn-check"
-        name="btnradio"
-        id="btnradio2"
-        autocomplete="off"
-      />
-      <label class="btn btn-outline-primary" for="btnradio2"
-        >Filipino</label
-      >
+<div class="container-fluid bg-light">
+<div class="contents">
+  <div>
+  <div class="card mb-4">
+    <div class="card-header">
+        Change language
     </div>
-    <!-- End of Eng/Fil Button -->
+    <div class="card-body">
+      <center>
+        Select the language you prefer to use below.
+        <div class="my-2"></div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">
+            English
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" disabled>
+          <label class="form-check-label" for="flexRadioCheckedDisabled">
+            Filipino
+          </label>
+        </div>
+        <div class="my-2"></div>
+        <a href="Home" class="btn btn-success btn-icon-split">
+            <span class="icon text-white-50">
+                <i class="fas fa-check"></i>
+            </span>
+            <span class="text">Apply changes</span>
+        </a>
+      </center>
+    </div>
   </div>
+  </div>
+</div>
 </div>
 {%endblock%}

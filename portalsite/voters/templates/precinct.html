@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {%load static %}
 {%block content %}
+<div
+            class="container-fluid text-center bg-light"
+          >
 <div class="nonmain">
     {%include 'charts.html'%}
     <ol>
@@ -8,6 +11,6 @@
             <li>{{i}}</li>
         {% endfor %}
     </ol>
-    <a class="scheduling" href='schedule'>Proceed to Scheduling</a>
+</div>
 </div>
 {% endblock %}

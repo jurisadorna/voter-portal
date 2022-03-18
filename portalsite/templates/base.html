@@ -68,7 +68,7 @@
         <!-- 404 Error Text -->
         <div class="text-center">
           <img
-            src="{%static 'img/logo_light.png'%}"
+            src="{%static 'img/logo_dark.png'%}"
             alt="Logo of Voter's Portal"
             width="30%"
             style="padding-bottom: 25px"
@@ -80,24 +80,25 @@
             a webapp to help you schedule your voting time smartly
           </p>
           <p class="text-gray-500 mb-0">
-            This is index.html, providing the skeleton for the whole
-            website.
-          </p>a
+            Open the menu to start navigating!
+          </p>
         </div>
       </div>
 
       <!-- /.container-fluid -->
-    </div>
       {%endblock%}
       
-  </body>
+  
   {%include 'footer.html'%}
-  <script src="{% static 'vendor/jquery/jquery.min.js'%}"></script>
+</body>
+
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 
 <!-- Core plugin JavaScript-->
 <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="{% static 'js/sb-admin-2.min.js'%}"></script>
+<script src="{% static 'js/sb-admin-2.min.js' %}"></script>
+   
   </html>
