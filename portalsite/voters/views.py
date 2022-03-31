@@ -19,7 +19,11 @@ def profile_view(request,*args,**kwargs):
     full_name=''
     if not user.is_authenticated:
         return redirect('Home')
-    name=Voter.objects.get(user=user)
+    df=User.objects.get(username=user)
+    print(user.is_voter)
+    print()
+    print()
+    name=Voter.objects.only('user').get(user=user)
     full_name=name.user.first_name+" "+name.user.last_name
     precinct=Precinct.objects.get(pNum=name.pNum)
     print(precinct)
