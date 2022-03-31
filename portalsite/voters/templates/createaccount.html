@@ -26,7 +26,8 @@
               <input
                 type="text"
                 class="form-control"
-                id="exampleInputfirstName1"
+                id="InputfirstName1"
+                onchange="autofillUser()"
               />
             </div>
             <div class="mb-3">
@@ -36,7 +37,8 @@
               <input
                 type="text"
                 class="form-control"
-                id="exampleInputMidName1"
+                id="InputMidName1"
+                onchange="autofillUser()"
               />
             </div>
             <div class="mb-3">
@@ -46,7 +48,8 @@
               <input
                 type="text"
                 class="form-control"
-                id="exampleInputlastName1"
+                id="InputlastName1"
+                onchange="autofillUser()"
               />
             </div>
             <!-- End of Name -->
@@ -99,8 +102,9 @@
         <!-- End of Left Side-->
 
         <!-- Right Side -->
-        <div class="col-lg-6 px-5 border border-2 border-success rounded">
+        <div class="col-lg-6 px-5">
           <!-- Voter's ID & Precinct Number -->
+          <h3 class="mt-5 fst-italic">Voter's Information</h3>
           <form>
             <div class="mb-3">
               <label for="exampleInputVotersID1" class="form-label"
@@ -110,6 +114,7 @@
                 type="text"
                 class="form-control"
                 id="exampleInputVotersID1"
+                readonly
               />
             </div>
             <div class="mb-4 pb-4">
@@ -120,6 +125,7 @@
                 type="text"
                 class="form-control"
                 id="exampleInputPrecinctNumber1"
+                readonly
               />
             </div>
             <!-- End of Voter's ID & Precinct Number -->
@@ -128,13 +134,14 @@
             <!-- Account Details -->
             <h3 class="mt-4 pt-5 fst-italic">Account Details</h3>
             <div class="mb-3">
-              <label for="exampleInputUsername1" class="form-label"
+              <label for="exampleAutoUsername1" class="form-label"
                 >Username</label
               >
-              <input
+              <input 
                 type="text"
                 class="form-control"
-                id="exampleInputUsername1"
+                id="AutoUsername1"
+                readonly
               />
             </div>
             <div class="mb-3">
@@ -172,7 +179,7 @@
           <!-- End of Account Details -->
         </div>
         <!-- End of Right Side-->
-        <div class="container py-4 border border-4 border-info text-center">
+        <div class="container py-4 text-center">
           <div class="mb-3 form-check">
             <input
               type="checkbox"
@@ -191,4 +198,18 @@
     </div>
   </div>
 </div>
+
+<!-- createAcc autofill for Username -->
+<script>
+  function autofillUser(){
+    var fn = document.getElementById('InputfirstName1').value;
+    var mn = document.getElementById('InputMidName1').value;
+    var ln = document.getElementById('InputlnName1').value;
+
+    let user = fn.charAt(0)+mn.charAt(0)+ln;
+    document.getElementById('AutoUsername1') = toLowerCase(user);
+  }
+
+</script>
+
 {% endblock %}
