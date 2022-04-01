@@ -10,3 +10,9 @@ admin, admin
 
 superuser
 user, 1234
+
+faci
+faci1, faciako
+
+rep
+rep1,repako
