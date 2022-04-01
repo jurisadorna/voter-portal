@@ -4,7 +4,7 @@ import re
 from django.http import HttpResponse
 from django.shortcuts import render,redirect 
 from django.contrib.auth import authenticate, login,logout
-from .models import Precinct, User,Voter,Admin
+from .models import Precinct, User,Voter,Admin,Repre
 from django.contrib import messages
 # Create your views here.
 def home_view(request,*args,**kwargs):
@@ -19,15 +19,23 @@ def profile_view(request,*args,**kwargs):
     full_name=''
     if not user.is_authenticated:
         return redirect('Home')
-    df=User.objects.get(username=user)
-    print(user.is_voter)
-    print()
-    print()
-    name=Voter.objects.only('user').get(user=user)
-    full_name=name.user.first_name+" "+name.user.last_name
-    precinct=Precinct.objects.get(pNum=name.pNum)
-    print(precinct)
-    return render(request,"profile.html",{'user':user,'name':full_name, 'info':name,'pr':precinct})
+    if user.is_voter:
+        name=Voter.objects.get(user=user)
+        full_name=name.user.first_name+" "+name.user.last_name
+        precinct=Precinct.objects.get(pNum=name.pNum)
+        print(precinct)
+        return render(request,"profile.html",{'user':user,'name':full_name, 'info':name,'pr':precinct})
+    voters=Repre.objects.filter(user=user)
+    print(user.username)
+    rep=User.objects.values('first_name','last_name').get(username=user.username)
+    full_name=rep['first_name']+" "+rep['last_name']
+    pr=[]
+    for vtr in voters:
+        precinct=Precinct.objects.get(pNum=vtr.pNum)
+        pr.append(precinct)
+    info=zip(voters,pr)
+    return render(request,"profile.html",{'user':user,'name':full_name, 'info':info})
+
 def precinct_view(request,*args,**kwargs):
     a=randint(1,20)
     b=randint(0,30)

@@ -1,75 +1,143 @@
 {%extends 'base.html' %}
 {%load static %}
-{%if user.is_voter%}
-  {%block content %}
-  <div class="container-fluid bg-light">
-    <div class="text-left">
-      <p class="lead text-gray-800 mb-3">
-        Profile
-      </p>
-    </div>
-    <div class="card shadow mb-4">
-      <div class="card-header py-3">
-        Basic Information
-        <div class="float-right">
-          <a href="#" class="btn-sm btn-primary btn-icon-split">
-            <span class="icon text-white-50">
-                <i class="fas fa-wrench"></i>
-            </span>
-            <span class="text">Edit Information</span>
-        </a>
+{%block content %}
+  {%if user.is_voter%}
+    <div class="container-fluid bg-light">
+      <div class="text-left">
+        <p class="lead text-gray-800 mb-3">
+          Profile
+        </p>
+      </div>
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          Basic Information
+          <div class="float-right">
+            <a href="#" class="btn-sm btn-primary btn-icon-split">
+              <span class="icon text-white-50">
+                  <i class="fas fa-wrench"></i>
+              </span>
+              <span class="text">Edit Information</span>
+          </a>
+          </div>
+        </div>
+        <div class="card-body">
+          <table class="table table-borderless">
+            <tbody>
+              <tr>
+                <td class="text-gray-600 mb-0 text-right">First Name: </td>
+                <td class="text-gray-900 mb-0 text-left fw-bold">{{user.first_name}}</td>
+                <td class="text-gray-600 mb-0 text-right">Current Address: </td>
+                <td class="text-gray-900 mb-0 text-left fw-bold">{{info.Add}}</td>
+              </tr>
+              <tr>
+                <td class="text-gray-600 mb-0 text-right">Middle Name: </td>
+                <td class="text-gray-900 mb-0 text-left fw-bold">{{info.mName}}</td>
+                <td class="text-gray-600 mb-0 text-right">Email: </td>
+                <td class="text-gray-900 mb-0 text-left fw-bold">{{user.email}}</td>
+              </tr>
+              <tr>
+                <td class="text-gray-600 mb-0 text-right">Last Name: </td>
+                <td class="text-gray-900 mb-0 text-left fw-bold">{{user.last_name}}</td>
+                <td class="text-gray-600 mb-0 text-right">Contact Number: </td>
+                <td class="text-gray-900 mb-0 text-left fw-bold">{{info.contact}}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-      <div class="card-body">
-        <table class="table table-borderless">
-          <tbody>
-            <tr>
-              <td class="text-gray-600 mb-0 text-right">First Name: </td>
-              <td class="text-gray-900 mb-0 text-left fw-bold">{{user.first_name}}</td>
-              <td class="text-gray-600 mb-0 text-right">Current Address: </td>
-              <td class="text-gray-900 mb-0 text-left fw-bold">{{info.Add}}</td>
-            </tr>
-            <tr>
-              <td class="text-gray-600 mb-0 text-right">Middle Name: </td>
-              <td class="text-gray-900 mb-0 text-left fw-bold">{{info.mName}}</td>
-              <td class="text-gray-600 mb-0 text-right">Email: </td>
-              <td class="text-gray-900 mb-0 text-left fw-bold">{{user.email}}</td>
-            </tr>
-            <tr>
-              <td class="text-gray-600 mb-0 text-right">Last Name: </td>
-              <td class="text-gray-900 mb-0 text-left fw-bold">{{user.last_name}}</td>
-              <td class="text-gray-600 mb-0 text-right">Contact Number: </td>
-              <td class="text-gray-900 mb-0 text-left fw-bold">{{info.contact}}</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          Voter's Information
+        </div>
+        <div class="card-body">
+          <table class="table table-borderless">
+            <tbody>
+              <tr>
+                <td class="text-gray-600 mb-0 text-right">Voter's ID: </td>
+                <td class="text-gray-900 mb-0 text-left fw-bold">{{info.vId}}</td>
+              </tr>
+              <tr>
+                <td class="text-gray-600 mb-0 text-right">Precinct No.: </td>
+                <td class="text-gray-900 mb-0 text-left fw-bold">{{info.pNum}}</td>
+              </tr>
+              <tr>
+                <td class="text-gray-600 mb-0 text-right">Precinct location: </td>
+                <td class="text-gray-900 mb-0 text-left fw-bold">{{pr.pAdd}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
-    <div class="card shadow mb-4">
-      <div class="card-header py-3">
-        Voter's Information
+  {%else%}
+    {% for vtr,add in info%}
+      <div class="container-fluid bg-light">
+        <div class="text-left">
+          <p class="lead text-gray-800 mb-3">
+            Profile
+          </p>
+        </div>
+        <div class="card shadow mb-4">
+          <div class="card-header py-3">
+            Basic Information
+            <div class="float-right">
+              <a href="#" class="btn-sm btn-primary btn-icon-split">
+                <span class="icon text-white-50">
+                    <i class="fas fa-wrench"></i>
+                </span>
+                <span class="text">Edit Information</span>
+            </a>
+            </div>
+          </div>
+          <div class="card-body">
+            <table class="table table-borderless">
+              <tbody>
+                <tr>
+                  <td class="text-gray-600 mb-0 text-right">First Name: </td>
+                  <td class="text-gray-900 mb-0 text-left fw-bold">{{vtr.vFname}}</td>
+                  <td class="text-gray-600 mb-0 text-right">Current Address: </td>
+                  <td class="text-gray-900 mb-0 text-left fw-bold">{{vtr.Add}}</td>
+                </tr>
+                <tr>
+                  <td class="text-gray-600 mb-0 text-right">Middle Name: </td>
+                  <td class="text-gray-900 mb-0 text-left fw-bold">{{vtr.mName}}</td>
+                  <td class="text-gray-600 mb-0 text-right">Email: </td>
+                  <td class="text-gray-900 mb-0 text-left fw-bold">awd</td>
+                </tr>
+                <tr>
+                  <td class="text-gray-600 mb-0 text-right">Last Name: </td>
+                  <td class="text-gray-900 mb-0 text-left fw-bold">{{vtr.vLname}}</td>
+                  <td class="text-gray-600 mb-0 text-right">Contact Number: </td>
+                  <td class="text-gray-900 mb-0 text-left fw-bold">{{vtr.contact}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card shadow mb-4">
+          <div class="card-header py-3">
+            Voter's Information
+          </div>
+          <div class="card-body">
+            <table class="table table-borderless">
+              <tbody>
+                <tr>
+                  <td class="text-gray-600 mb-0 text-right">Voter's ID: </td>
+                  <td class="text-gray-900 mb-0 text-left fw-bold">{{vtr.vId}}</td>
+                </tr>
+                <tr>
+                  <td class="text-gray-600 mb-0 text-right">Precinct No.: </td>
+                  <td class="text-gray-900 mb-0 text-left fw-bold">{{vtr.pNum}}</td>
+                </tr>
+                <tr>
+                  <td class="text-gray-600 mb-0 text-right">Precinct location: </td>
+                  <td class="text-gray-900 mb-0 text-left fw-bold">{{add}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
-      <div class="card-body">
-        <table class="table table-borderless">
-          <tbody>
-            <tr>
-              <td class="text-gray-600 mb-0 text-right">Voter's ID: </td>
-              <td class="text-gray-900 mb-0 text-left fw-bold">{{info.vId}}</td>
-            </tr>
-            <tr>
-              <td class="text-gray-600 mb-0 text-right">Precinct No.: </td>
-              <td class="text-gray-900 mb-0 text-left fw-bold">{{info.pNum}}</td>
-            </tr>
-            <tr>
-              <td class="text-gray-600 mb-0 text-right">Precinct location: </td>
-              <td class="text-gray-900 mb-0 text-left fw-bold">{{pr.pAdd}}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-  {%endblock%}
-{%else%}
-
-{% endif%}
+    {% endfor %}
+  {% endif%}
+{%endblock%}
